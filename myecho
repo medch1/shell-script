@@ -15,10 +15,11 @@ def commit(m,b):
     print('success add')
     os.system('git commit -m "' + m + ' "  ')
     print('success commit')
-    os.system('git push -u origin '+b)
+    status= os.system('git push -u origin '+b)
     print('success push')
     print('commit and push done ')
-    print(os.system('git push -u origin '+b).stdout)
+
+    print("status = "+status)
 commit(message,branch)
 
 
