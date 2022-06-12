@@ -11,15 +11,18 @@ branch = str(sys.argv[2])
 
 
 def commit(m,b):
-    os.system('git add .')
-    print('success add')
-    os.system('git commit -m "' + m + ' "  ')
-    print('success commit')
+    status= os.system('git add .')
+    if (status ==0) :
+        print('success add')
+    status = os.system('git commit -m "' + m + ' "  ')
+    if (status ==0) :
+        print('success commit')
     status= os.system('git push -u origin '+b)
-    print('success push')
-    print('commit and push done ')
+    if (status == 0) :
+        print('success push')
+        print('commit and push done ')
 
-    print("status = "+str(status))
+    #print("status = "+str(status))
 commit(message,branch)
 
 
