@@ -19,7 +19,6 @@ def commit(m,b):
     print('success push')
     print('commit and push done ')
 
-
 commit(message,branch)
 
 
