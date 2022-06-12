@@ -1,5 +1,23 @@
 #!/usr/bin/python3.8
+import os
 import sys
 
-for arg in sys.argv:
-    print(arg)
+
+
+print('1st argument')
+print(sys.argv[1])
+
+print('2nd argument')
+print(sys.argv[2])
+commit = str(sys.argv[2])
+os.system('git add .')
+print('success add')
+os.system('git commit -m "'+ commit +' "  ')
+print('success commit')
+os.system('git push -u origin main')
+print('success push')
+print('commit and push done ')
+
+
+
+
