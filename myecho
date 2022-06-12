@@ -39,6 +39,7 @@ def commit(m,b):
 succ = commit(message,branch)
 if succ ==3:
     response = requests.post(mUrl, "Push success to branch " + branch + ".")
+    print(response.status_code)
 
 
 
