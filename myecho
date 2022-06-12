@@ -1,7 +1,15 @@
 #!/usr/bin/python3.8
 import os
 import sys
+import requests
 
+mUrl = "https://discord.com/api/webhooks/985626234794942515/7UZbJ-czKuBDr_cAikS73-7byp79CocBdFHJUgcKKTPf18fKK23KrbeKm3zOP_Qpu_9f"
+data = {"content": 'abc'}
+response = requests.post(mUrl, data)
+
+print(response.status_code)
+
+print(response.content)
 
 print('2nd argument')
 print(sys.argv[1])
@@ -22,8 +30,11 @@ def commit(m,b):
         print('success push')
         print('commit and push done ')
 
-    #print("status = "+str(status))
 commit(message,branch)
 
+
+print(response.status_code)
+
+print(response.content)
 
 
