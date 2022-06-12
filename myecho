@@ -21,17 +21,17 @@ def commit(m,b):
     status= os.system('git add .')
     if (status ==0) :
         print('success add')
-        ++succ
+
 
     status = os.system('git commit -m "' + m + ' "  ')
     if (status ==0) :
         print('success commit')
-        ++succ
+        succ =+1
     status= os.system('git push -u origin '+b)
     if (status == 0) :
         print('success push')
         print('commit and push done ')
-        ++succ
+        succ =+1
 
     return succ
 
