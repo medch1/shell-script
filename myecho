@@ -4,12 +4,10 @@ import sys
 import requests
 
 mUrl = "https://discord.com/api/webhooks/985626234794942515/7UZbJ-czKuBDr_cAikS73-7byp79CocBdFHJUgcKKTPf18fKK23KrbeKm3zOP_Qpu_9f"
-data = {"content": 'abc'}
-response = requests.post(mUrl, data)
 
-print(response.status_code)
 
-print(response.content)
+
+
 
 print('2nd argument')
 print(sys.argv[1])
@@ -19,22 +17,32 @@ branch = str(sys.argv[2])
 
 
 def commit(m,b):
+    succ = 0
     status= os.system('git add .')
     if (status ==0) :
         print('success add')
+        ++succ
+
     status = os.system('git commit -m "' + m + ' "  ')
     if (status ==0) :
         print('success commit')
+        ++succ
     status= os.system('git push -u origin '+b)
     if (status == 0) :
         print('success push')
         print('commit and push done ')
+        ++succ
 
-commit(message,branch)
+    return succ
 
+
+succ = commit(message,branch)
+if succ ==3:
+    response = requests.post(mUrl, "Push success to branch " + branch + ".")
 
 print(response.status_code)
-
 print(response.content)
+
+
 
 
