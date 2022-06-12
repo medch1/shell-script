@@ -20,7 +20,8 @@ def commit(m,b):
     os.system('git push -u origin '+b)
     print('success push')
     print('commit and push done ')
-print(commit(message,branch).stdout)
+commit(message,branch)
+print(commit().stdout)
 
 
 
