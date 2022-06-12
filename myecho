@@ -3,13 +3,9 @@ import os
 import sys
 
 
-
-print('1st argument')
-print(sys.argv[1])
-
 print('2nd argument')
-print(sys.argv[2])
-commit = str(sys.argv[2])
+print(sys.argv[1])
+commit = str(sys.argv[1])
 os.system('git add .')
 print('success add')
 os.system('git commit -m "'+ commit +' "  ')
