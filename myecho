@@ -19,7 +19,7 @@ def commit(m,b):
     print('success push')
     print('commit and push done ')
 
-    print("status = "+status)
+    print("status = "+str(status))
 commit(message,branch)
 
 
