@@ -1,6 +1,8 @@
 #!/usr/bin/python3.8
 import os
 import sys
+import requests
+from discord import Webhook, RequestsWebhookAdapter
 
 
 print('2nd argument')
@@ -18,8 +20,7 @@ def commit(m,b):
     os.system('git push -u origin '+b)
     print('success push')
     print('commit and push done ')
-
-commit(message,branch)
+print(commit(message,branch).stdout)
 
 
 
