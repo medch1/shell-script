@@ -5,15 +5,22 @@ import sys
 
 print('2nd argument')
 print(sys.argv[1])
-commit = str(sys.argv[1])
-os.system('git add .')
-print('success add')
-os.system('git commit -m "'+ commit +' "  ')
-print('success commit')
-os.system('git push -u origin main')
-print('success push')
-print('commit and push done ')
+message = str(sys.argv[1])
+branch = str(sys.argv[2])
 
+
+
+def commit(m,b):
+    os.system('git add .')
+    print('success add')
+    os.system('git commit -m "' + m + ' "  ')
+    print('success commit')
+    os.system('git push -u origin '+b)
+    print('success push')
+    print('commit and push done ')
+
+
+commit(message,branch)
 
 
 
