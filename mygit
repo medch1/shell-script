@@ -5,15 +5,8 @@ import requests
 
 mUrl = "https://discord.com/api/webhooks/985626234794942515/7UZbJ-czKuBDr_cAikS73-7byp79CocBdFHJUgcKKTPf18fKK23KrbeKm3zOP_Qpu_9f"
 
-
-
-
-
-
 message = str(sys.argv[1])
 branch = str(sys.argv[2])
-
-
 
 def commit(m,b):
     succ = 0
@@ -37,11 +30,7 @@ def commit(m,b):
         print('*****************************')
         succ +=1
 
-
-
     return succ
-
-
 succ = commit(message,branch)
 
 if succ ==3:

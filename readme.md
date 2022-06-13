@@ -23,7 +23,7 @@ Make sure your program is on the PATH
 $ mkdir -p ~/bin
 ```
 ```sh
-$ cp myecho ~/bin
+$ cp mygit ~/bin
 ```
 ```sh
 export PATH=$PATH":$HOME/bin"
@@ -49,7 +49,7 @@ For production release:
 
 ```sh
 $ mycmd Hello, World!
-/Users/youruser/bin/myecho
+/Users/youruser/bin/mygit
 Hello,
 World!
 ```
