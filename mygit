@@ -2,8 +2,9 @@
 import os
 import sys
 import requests
-
-mUrl = "https://discord.com/api/webhooks/985626234794942515/7UZbJ-czKuBDr_cAikS73-7byp79CocBdFHJUgcKKTPf18fKK23KrbeKm3zOP_Qpu_9f"
+from dotenv import load_dotenv
+load_dotenv()
+mUrl =os.getenv('web_hook')
 
 message = str(sys.argv[1])
 branch = str(sys.argv[2])
